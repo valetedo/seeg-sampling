@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: com.biolab.xtens.contact.InspectorTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.025 sec <<< FAILURE! - in com.biolab.xtens.contact.InspectorTest
+testGetAnatomicalAreaStatistics(com.biolab.xtens.contact.InspectorTest)  Time elapsed: 0.023 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: Not yet implemented
+	at junit.framework.Assert.fail(Assert.java:47)
+	at com.biolab.xtens.contact.InspectorTest.testGetAnatomicalAreaStatistics(InspectorTest.java:8)
+
+testHistogram(com.biolab.xtens.contact.InspectorTest)  Time elapsed: 0 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: Not yet implemented
+	at junit.framework.Assert.fail(Assert.java:47)
+	at com.biolab.xtens.contact.InspectorTest.testHistogram(InspectorTest.java:12)
+

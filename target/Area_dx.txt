@@ -1,0 +1,3 @@
+G_front_middle 115
+S_oc-temp_lat 27
+G_and_S_cingul-Ant 82

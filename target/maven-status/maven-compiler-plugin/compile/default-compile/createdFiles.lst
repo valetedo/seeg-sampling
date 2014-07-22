@@ -1,0 +1,14 @@
+com/biolab/xtens/contact/bean/PatientBean.class
+com/biolab/xtens/contact/ContactParser.class
+com/biolab/xtens/contact/ContactManagerImpl.class
+com/biolab/xtens/contact/Inspector.class
+com/biolab/xtens/contact/bean/PersonalData.class
+com/biolab/xtens/contact/ContactParam.class
+com/biolab/xtens/contact/bean/PersonalDataBean.class
+com/biolab/xtens/contact/bean/Data.class
+com/biolab/xtens/contact/ContactParserImplA.class
+com/biolab/xtens/contact/bean/DataBean.class
+com/biolab/xtens/contact/Contact.class
+com/biolab/xtens/contact/ContactManager.class
+com/biolab/xtens/contact/ContactParserImplB.class
+com/biolab/xtens/contact/DataParam.class
