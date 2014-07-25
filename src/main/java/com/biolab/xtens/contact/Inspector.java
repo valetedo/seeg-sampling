@@ -40,15 +40,19 @@ import com.sun.jersey.core.util.MultivaluedMapImpl;
 
 public class Inspector {
 	
-	//private String uname = "admin";
-	//private String pw = "admin";
-	//private String address = "http://10.186.10.60:8080/xtens/rest/data/json/getMDataList";
-	//private String address = "http://10.186.10.60:8080/xtens/rest/data/json/query";
 
-	
-	
-	
-	
+	/**
+	 * Returns a list of two maps that represent the distribution of the anatomical areas among the two cerebral hemispheres. 
+	 * The list argument is the anatomical areas list. The uname and pw are the login-in information to access to XTENS.
+	 * The address is the ip address of the PC where XTENS is located.	
+	 * This method looks for the anatomical areas that are in the list,among SEEG data in XTENS and it computes the number of the occurrences of each area in each hemisphere. 		
+	 * @param list		the anatomical areas list
+	 * @param uname		the username to access to XTENS
+	 * @param pw		the password related to the username
+	 * @param address	the ip address of the PC where XTENS is located
+	 * @return			a list of two maps that represent the distribution of the anatomical areas among the two cerebral hemispheres.
+	 * @throws FileNotFoundException
+	 */
 	
 	List<Map<String,Integer>> getAnatomicalAreaStatistics(List<String> list, String uname, String pw, String address) throws FileNotFoundException
 	{
@@ -60,7 +64,7 @@ public class Inspector {
 		try {
 			Client client = Client.create();
 			client.addFilter(new HTTPBasicAuthFilter(uname,pw)); // utente e password
-			WebResource webResource = client.resource(address+"/xtens/rest/data/json/getMDataList");
+			WebResource webResource = client.resource(address+"/rest/data/json/getMDataList");
 			MultivaluedMap<String, String> queryParams = new MultivaluedMapImpl();
 			MultivaluedMap<String, String> queryParams_data = new MultivaluedMapImpl();
 
@@ -167,6 +171,11 @@ public class Inspector {
 		return result;
 
 	}
+	/** The map argument is a list of two maps that represent the anatomical areas in the two cerebral hemispheres.
+	 *  This method create two plots about the histograms of the anatomical areas in the human brain. In particular it creates two histograms: one is about right hemisphere and the other is about left hemisphere.
+	 * @param map		a list of two maps that represent the anatomical areas in the two cerebral hemispheres
+	 * @throws IOException
+	 */
 	
 	public void histogram(List<Map<String,Integer>> map) throws IOException{
 		
